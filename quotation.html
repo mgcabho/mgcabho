@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mgcabho Construction | Request a Quotation</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#fff;
+color:#000;
+}
+
+header{
+background:#000;
+color:#fff;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav a{
+color:#fff;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+section{
+max-width:1000px;
+margin:auto;
+padding:50px 20px;
+}
+
+h2{
+border-left:6px solid black;
+padding-left:15px;
+}
+
+form{
+display:grid;
+gap:15px;
+margin-top:30px;
+}
+
+input, select, textarea{
+padding:12px;
+border:2px solid black;
+width:100%;
+font-size:16px;
+}
+
+textarea{
+height:120px;
+}
+
+button{
+background:black;
+color:white;
+border:none;
+padding:15px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#333;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Mgcabho Construction</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+<a href="gallery.html">Gallery</a>
+<a href="community.html">Community</a>
+<a href="news.html">News</a>
+<a href="quotation.html">Quotation</a>
+<a href="index.html#contact">Contact</a>
+</nav>
+</header>
+
+<section>
+
+<h2>Request a Quotation</h2>
+
+<p>Please complete the form below and our team will provide you with a detailed quotation.</p>
+
+<form onsubmit="sendToWhatsApp(); return false;">
+
+<input type="text" id="name" placeholder="Full Name" required>
+
+<input type="email" id="email" placeholder="Email Address" required>
+
+<input type="tel" id="phone" placeholder="Phone Number">
+
+<input type="text" id="location" placeholder="Project Location">
+
+<select id="service">
+<option>Building Construction</option>
+<option>Bridge Construction</option>
+<option>Road Construction</option>
+<option>Renovations</option>
+<option>General Construction</option>
+</select>
+
+<input type="text" id="budget" placeholder="Estimated Budget">
+
+<textarea id="details" placeholder="Describe your project"></textarea>
+
+<button type="submit">Request Quotation via WhatsApp</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Mgcabho Construction</p>
+
+</footer>
+<script>
+
+function sendToWhatsApp(){
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let phone = document.getElementById("phone").value;
+let location = document.getElementById("location").value;
+let service = document.getElementById("service").value;
+let budget = document.getElementById("budget").value;
+let details = document.getElementById("details").value;
+
+let message =
+"Quotation Request - Mgcabho Construction%0A%0A" +
+"Name: " + name + "%0A" +
+"Email: " + email + "%0A" +
+"Phone: " + phone + "%0A" +
+"Location: " + location + "%0A" +
+"Service: " + service + "%0A" +
+"Budget: " + budget + "%0A" +
+"Project Details: " + details;
+
+let whatsappURL = "https://wa.me/26878626710?text=" + message;
+
+window.open(whatsappURL, "_blank");
+
+}
+
+</script>
+</body>
+</html>
